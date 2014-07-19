@@ -19,7 +19,7 @@ function tasty_backend_standard_views_default_views() {
   
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Manage Articles';
+  $handler->display->display_options['title'] = 'Manage Article content';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
@@ -338,7 +338,7 @@ function tasty_backend_standard_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['path'] = 'admin/manage/content/articles';
+  $handler->display->display_options['path'] = 'admin/manage/content/article';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Articles';
   $handler->display->display_options['menu']['description'] = 'Manage all content of the "Article" content type.';
