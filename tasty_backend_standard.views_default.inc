@@ -340,7 +340,7 @@ function tasty_backend_standard_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'admin/manage/content/article';
   $handler->display->display_options['menu']['type'] = 'normal';
-  $handler->display->display_options['menu']['title'] = 'Articles';
+  $handler->display->display_options['menu']['title'] = 'Article';
   $handler->display->display_options['menu']['description'] = 'Manage all content of the "Article" content type.';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
