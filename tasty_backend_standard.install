@@ -45,8 +45,7 @@ function tasty_backend_standard_install() {
     rdf_mapping_save($rdf_mapping);
   }
   
-  // Add the vertical tabs. Main content tab being added by tasty_backend_base module.
-  // Alter the main content vertical tab.
+  // Add or alter the vertical tabs. Main content tab already added by tasty_backend_base module, just need to update it.
   $main_content_group = field_group_load_field_group('group_main_content', 'node', 'article', 'form');
   $main_content_group->children = array(
     0 => 'title',
