@@ -48,27 +48,26 @@ function tasty_backend_standard_install() {
   // Add the vertical tabs. Main content tab being added by tasty_backend_base module.
   $group = new stdClass();
   $group->id = NULL;
-  $group->disabled = FALSE;
   $group->identifier = 'group_images|node|article|form';
   $group->group_name = 'group_images';
   $group->entity_type = 'node';
   $group->bundle = 'article';
   $group->mode = 'form';
   $group->parent_name = '';
-  $group->data = array(
-    'label' => 'Images',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_image',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-images field-group-tab',
-        'required_fields' => 1,
-      ),
+  $group->table = 'field_group';
+  $group->type = 'Normal';
+  $group->label = 'Images';
+  $group->weight = '0';
+  $group->children = array(
+    0 => 'field_image',
+  );
+  $group->format_type = 'tab';
+  $group->format_settings = array(
+    'formatter' => 'closed',
+    'instance_settings' => array(
+      'description' => '',
+      'classes' => 'group-images field-group-tab',
+      'required_fields' => 1,
     ),
   );
   ctools_include('export');
