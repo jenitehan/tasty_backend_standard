@@ -46,6 +46,17 @@ function tasty_backend_standard_install() {
   }
   
   // Add the vertical tabs. Main content tab being added by tasty_backend_base module.
+  // Alter the main content vertical tab.
+  $main_content_group = field_group_load_field_group('group_main_content', 'node', 'article', 'form');
+  $main_content_group->children = array(
+    0 => 'title',
+    1 => 'field_tags',
+    2 => 'body',
+  );
+  ctools_include('export');
+  ctools_export_crud_save($main_content_group);
+  
+  // Add the Images vertical tab.
   $group = new stdClass();
   $group->id = NULL;
   $group->identifier = 'group_images|node|article|form';
@@ -70,7 +81,6 @@ function tasty_backend_standard_install() {
       'required_fields' => 1,
     ),
   );
-  ctools_include('export');
   ctools_export_crud_save('field_group', $group);
   ctools_export_crud_enable('field_group', $group->identifier);
   

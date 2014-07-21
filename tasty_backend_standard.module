@@ -1,5 +1,10 @@
 <?php
 
+function tasty_backend_standard_init() {
+  $main_content_group = field_group_load_field_group('group_main_content', 'node', 'article', 'form');
+  dpm($main_content_group);
+}
+
 /**
 * Implements hook_ctools_plugin_api().
 */
