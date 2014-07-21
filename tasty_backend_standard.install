@@ -57,7 +57,7 @@ function tasty_backend_standard_install() {
   $group->table = 'field_group';
   $group->type = 'Normal';
   $group->label = 'Images';
-  $group->weight = '0';
+  $group->weight = '1';
   $group->children = array(
     0 => 'field_image',
   );
