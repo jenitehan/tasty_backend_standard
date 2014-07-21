@@ -54,7 +54,7 @@ function tasty_backend_standard_install() {
     2 => 'body',
   );
   ctools_include('export');
-  ctools_export_crud_save($main_content_group);
+  ctools_export_crud_save('field_group', $main_content_group);
   
   // Add the Images vertical tab.
   $group = new stdClass();
