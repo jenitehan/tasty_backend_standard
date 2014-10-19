@@ -87,7 +87,7 @@ function tasty_backend_standard_install() {
   variable_set('node_preview_article', '0');
   
   // Remove menu options from the article content type.
-  variable_set('menu_options_article'. array());
+  variable_set('menu_options_article', array());
   
   // Create a default vocabulary named "Tags", enabled for the 'article' content type.
   $description = st('Use tags to group articles on similar topics into categories.');
