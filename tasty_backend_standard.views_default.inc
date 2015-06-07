@@ -9,7 +9,7 @@ function tasty_backend_standard_views_default_views() {
   // Article Bulk Operations view.
   $view = new view();
   $view->name = 'article_bulk_operations';
-  $view->description = '';
+  $view->description = 'A bulk operations view to manage "Article" content.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Article Bulk Operations';
